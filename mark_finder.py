@@ -8,6 +8,9 @@
 def mark_finder(level):
     # This'll determine the mark
 
+    # \/\/\/dicstionnaries\/\/\/
+    # https://www.w3schools.com/python/python_dictionaries.asp
+    
     # This dictionnary keeps track of the levels associated with the marks
     marks = {
         "4+": "97.5",
@@ -27,12 +30,11 @@ def mark_finder(level):
         "0-": "14.5"
     }
 
+    # process
     if level in marks:
         return(marks[level])
     else:
         return False
-    # process
-
 
 def main():
     # This is asks for the user input and runs mark_finder()
@@ -47,6 +49,7 @@ def main():
         # runs mark_finder()
         mark = mark_finder(level)
         if mark is False:
+            # output
             print("\nSorry, you mark could not be determined.")
             print("Try again.\n")
         else:
